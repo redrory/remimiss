@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="description" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Remimiss "%>">
   <title>Remimiss</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="container">
+    <header>
 
-<%= yield %>
+    </header>
+    <main role="main">
+      <%= yield %>
+    </main>
 
+    <footer>
+
+    </footer>
+  </div>
 </body>
 </html>
