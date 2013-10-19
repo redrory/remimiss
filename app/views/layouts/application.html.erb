@@ -4,22 +4,34 @@
   <meta name="description" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Remimiss "%>">
   <title>Remimiss</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="container">
-    <header>
-
+    <header class="navbar navbar-fixed-top">
+      <nav class="navbar-inner" >
+        <div class="container">
+          <%= render 'layouts/nav' %>
+        </div>
+      </nav>
     </header>
+
     <main role="main">
-      <%= yield %>
+      <div class="container">
+        <div class="content">
+          <div class="row">
+            <div class="span12">
+              <%= render 'layouts/messages'%>
+              <%= yield %>
+            </div>
+          </div>
+          <footer>
+          </footer>
+        </div>
+      </div>
     </main>
-
-    <footer>
-
-    </footer>
   </div>
 </body>
 </html>
