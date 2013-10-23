@@ -7,7 +7,7 @@ class VisitorsController < ApplicationController
   def create
     @visitor = Visitor.new(secure_params)
     if @visitor.valid?
-      @visitor.update_spreadsheet
+      #@visitor.update_spreadsheet
 
       VisitorMailer.vote_confirmation(@visitor).deliver
 
