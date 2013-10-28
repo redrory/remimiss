@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'activerecord-tableless'
 gem 'google_drive'
 
+gem 'devise', '3.0.0.rc'
 #rails bootstrap
 
 gem 'bootstrap-sass'
@@ -37,7 +38,7 @@ gem 'high_voltage'
 gem 'simple_form', '>= 3.0.0.rc'
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg'
   gem 'better_errors'
   gem 'quiet_assets'
 end
